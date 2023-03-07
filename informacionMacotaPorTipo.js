@@ -5,15 +5,18 @@ perro
 gato
 ave
 En caso de pasar una mascota la cual no sea de la lista deberá retornar "Tipo de mascota inválida"
+
 Para cada tipo de mascota, la función retornará diferente información basada en la edad.
 Perros
 Si la edad es menor al año, deberá retornar "Los cachorros necesitan pequeñas y frecuentes sesiones de juego"
 Si la edad es entre 1 y 7 años, deberá retornar "Los perros a esta edad necesitan caminatas diarias y sesiones de juego"
 Si la edad es mayor a 7 años, deberá retornar "Los perros viejos necesitan caminatas más cortas"
+
 gatos
 Si la edad es menor al año, deberá retornar "Los gatitos necesitan frecuentes sesiones de juego"
 Si la edad es entre 1 y 7 años, deberá retornar "Los gatos a esta edad necesitan jugar diariamente"
 Si la edad es mayor a 7 años, deberá retornar "Los gatos viejos necesitan sesiones de juego más cortas"
+
 aves
 Si la edad es menor al año, deberá retornar "Las aves jóvenes necesitan mucho espacio para volar"
 Si la edad es entre 1 y 7 años, deberá retornar "Las aves necesitan jugar diariamente y un lugar para volar"
@@ -31,3 +34,53 @@ Output: "Tipo de mascota invalida"
 
 
 */
+
+let type;
+let age = 0;
+let perro = "perro";
+let gato = "gato";
+let ave = "ave";
+
+
+
+
+function getPetExerciseInfo(type, age) {
+   switch (type) {
+     case perro:
+       if (age < 1) {
+         return ("Los cachorros necesitan pequeñas y frecuentes sesiones de juego")
+       }
+       else if (age < 7) {
+         return ("Los perros a esta edad necesitan caminatas diarias y sesiones de juego")
+       }
+       else {
+         return ("Los perros viejos necesitan caminatas más cortas")
+       }
+       break;
+     case gato:
+       if (age < 1) {
+         return ("Los gatitos necesitan frecuentes sesiones de juego")
+       }
+       else if (age < 7) {
+         return ("Los gatos a esta edad necesitan jugar diariamente")
+       }
+       else {
+         return ("Los gatos viejos necesitan sesiones de juego más cortas")
+       }
+       break;
+     case ave:
+       if (age < 1) {
+         return ("Las aves jóvenes necesitan mucho espacio para volar")
+       }
+       else if (age < 7) {
+         return ("Las aves necesitan jugar diariamente y un lugar para volar")
+       }
+       else {
+         return ("Las aves mayores necesitan descansar más, pero siguen ocupando un lugar para volar")
+       }
+       break;
+     default:
+       return ("Tipo de mascota inválida");
+       break;
+   }
+ }
