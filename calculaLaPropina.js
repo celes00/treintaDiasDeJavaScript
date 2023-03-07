@@ -13,3 +13,11 @@ Ejemplo 2:
 Input: calculateTip(1524.33, 25);
 Output: 381.0825;
  */
+let billAmount;
+let tipPercentage;
+let resultado;
+
+function calculateTip(billAmount, tipPercentage) {
+   let resultado = billAmount * tipPercentage / 100;
+   return resultado;
+}
