@@ -24,5 +24,24 @@ $$$$$$
 
 
 
+function printTriangle(size, character){
+    let triangle = "";
+for (let i = 1; i <= size; i++) {
+    let spaces= " ".repeat(size -i);
+    let characters = character.repeat(i);
+    triangle = triangle + spaces + characters;
+
+    if (i < size) {
+        triangle +="\n"
+    }
+}
+return triangle;
+}
 
 
+/*
+sise es cantidad de veces que va a imprimir
+va a iterar agregando 1 character y restando un espacio
+primer linea imprime  size -1 = cant de espacios + 1 character
+
+*/
